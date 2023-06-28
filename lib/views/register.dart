@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 //import 'package:parkify_mobile_app/views/parkify_list.dart';
 import 'package:parkify_mobile_app/views/intro.dart';
 import 'package:parkify_mobile_app/views/login.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -11,6 +12,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -35,7 +37,7 @@ class _RegisterState extends State<Register> {
             Container(
               padding: EdgeInsets.all(10),
               child: TextField(
-                controller: emailController,
+                controller: nameController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Nombres y Apellidos',
@@ -56,6 +58,7 @@ class _RegisterState extends State<Register> {
               padding: EdgeInsets.all(10),
               child: TextField(
                 controller: passwordController,
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Contraseña',
@@ -64,7 +67,7 @@ class _RegisterState extends State<Register> {
             ),
             Container(
               height: 50,
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: ElevatedButton(
                 child: const Text('Continuar'),
                 onPressed: () {
@@ -80,7 +83,7 @@ class _RegisterState extends State<Register> {
             ),
             Container(
               height: 50,
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: ElevatedButton(
                 child: const Text('Iniciar sesión'),
                 onPressed: () {

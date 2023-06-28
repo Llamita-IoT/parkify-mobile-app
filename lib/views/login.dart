@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:parkify_mobile_app/views/parkify_list.dart';
 import 'package:parkify_mobile_app/views/intro.dart';
+import 'dashboard.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -45,6 +46,7 @@ class _LoginState extends State<Login> {
               padding: EdgeInsets.all(10),
               child: TextField(
                 controller: passwordController,
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Contraseña',
@@ -64,7 +66,7 @@ class _LoginState extends State<Login> {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return Intro();
+                        return Dashboard();
                       },
                     ),
                   );
