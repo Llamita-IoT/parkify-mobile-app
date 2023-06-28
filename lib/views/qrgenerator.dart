@@ -33,7 +33,7 @@ class _QrGeneratorState extends State<QrGenerator> {
         height: 800,
         width: 800,
       ),
-      /*Padding(
+      /*Padding( 
         padding: EdgeInsets.all(10),
         child: ListView(
           children: [
